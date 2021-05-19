@@ -1,2 +1,3 @@
-## what is this ?
-this is readme.md
+## what`s this?
+
+study hard and make progress every day
