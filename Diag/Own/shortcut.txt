@@ -1,0 +1,100 @@
+﻿E:\localSVN\Wing_LUI\2．開発\01.WingLUI\02.App開発\09.Diag\7. _資料\Jira\01_開発共通情報纏め
+
+IFT:环境
+https://alexandrite.fujixerox.co.jp/git/scm/~bob.wang.sdcc1_chn.fujixerox.com/uilcw.git
+
+VOS
+https://alexandrite.fujixerox.co.jp/git/projects/OCDOC/repos/lui_vos/browse
+
+https://alexandrite.fujixerox.co.jp/git/scm/ocdoc/lui_frame.git
+origin/develop/pf3.0_latest
+
+
+top.As.AsLibInfo.Cfg.DIAG_DC2912
+
+设置EP有效：
+AS > EP > SvcSts Changed
+EP Sts -> WEP, ConsDps -> true
+改NVM值
+CE： WepDiagRegCe  1
+非CE：WepDiagRegUsr 1
+
+NVM
+IOTColSpec                   16 ? "BW" : "COLOR"
+DADF                            0 ? "NONE" : 'ENBL"
+HDDTp                         1 ? "SSD" : "HDD"
+FWA                             1 ？'ENBL" : "NONE"
+
+BFin                              0 ? "NONE" : 'ENBL"
+GBFin                            0 ? "NONE" : 'ENBL"
+Booklet                         0 ? "NONE" : 'ENBL"
+Punch                            0 ? "NONE" : 'ENBL" 
+CHFin                            0 ? "NONE" : 'ENBL" 
+D2GFin                            0 ? "NONE" : 'ENBL" 
+ZFold                            0 ? "NONE" : 'ENBL" 
+PinlessStapler                 0 ? "NONE" : 'ENBL" 
+
+
+
+
+top.As.AsLibInfo.Cfg.DIAG_DC1303 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1239 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1243 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC2931 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1213 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1304 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1215 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1129 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC2912 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1222 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC1240 = 1;
+top.As.AsLibInfo.Cfg.DIAG_DC2675 = 1;
+
+top.As.AsNVM.IOTColSpec=16;
+top.As.AsNVM.DADF=0;
+top.As.AsNVM.HDDTp=1;
+top.As.AsNVM.FWA=0;
+
+top.As.AsLibInfo.PDI.DC1224Dsp=0
+
+-----------D2G-Fin--------------------------------------
+top.As.AsNVM.D2GFin=1;
+top.As.AsNVM.CHFin=0;
+top.As.AsNVM.ZFold=1;
+top.As.AsNVM.Booklet=1;
+top.As.AsNVM.Creaser=1;
+top.As.AsNVM.JobDispType=1;
+
+4095
+非定型Size
+X-297
+Y-210
+-----------CH-Fin--------------------------------------
+top.As.AsNVM.D2GFin=0;
+top.As.AsNVM.CHFin=1;
+top.As.AsNVM.ZFold=1;
+top.As.AsNVM.Booklet=1;
+top.As.AsNVM.Creaser=1;
+top.As.AsNVM.JobDispType=1;
+
+查阅用纸种类标识对应的文言
+top.Cmn.LibMsgGet(top.Cmn.LibGetCmnTxt('PapTp', 'xxx'));
+
+
+FoldAdj.Bi1Fs=266
+oldAdj.Bi1Ss=466
+
+
+CE登录
+CmnCePwd_frm
+
+
+DiagTstPtrnEpc.htm
+DiagTstPtrnEpcOutTray.htm
+
+080027D5FF46
+
+
+
+
+
