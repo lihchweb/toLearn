@@ -47,7 +47,7 @@ console.log(fn.getAge());
 
 **Fn是一个函数，fn对象是从Fn函数new出来的，这样fn对象就可以调用Fn.prototype中的属性。**
 
-因为每个对象都有一个隐藏的属性， '__proto__',这个属性引用了创建这个对象的函数的prototype，即 fn.__proto__ === Fn.prototype。
+因为每个对象都有一个隐藏的属性， ```__proto__```,这个属性引用了创建这个对象的函数的prototype，即 ```fn.__proto__ === Fn.prototype```
 
-我们一般称这个 '__proto__'为"隐式原型".
+我们一般称这个 ```__proto__```为"隐式原型".
 
