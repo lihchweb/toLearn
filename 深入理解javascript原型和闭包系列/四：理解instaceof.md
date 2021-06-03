@@ -1,4 +1,4 @@
-```
+```js
 function Foo(){};
 var f1 = new Foo();
 
@@ -12,7 +12,7 @@ Instanceof的判断规则是：沿着A的__proto__这条线来找，同时沿着
 
 依据上述规则，可以得到类似下面这些结论:
 
-```
+```js
 Object instanceof Function //true
 
 Function instanceof Object //true
