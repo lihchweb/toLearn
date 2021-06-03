@@ -5,7 +5,7 @@
 
 构造函数可以理解为是用来new对象的函数。但是严格来说所有的函数都可以new一个对象，但是有些函数的定义就是为了用来new对象的，一般来说，构造函数的函数名第一个字母会大写。
 
-```
+```js
 function Foo() {
   this.name = 'lihouchun'
   this.age = 18
@@ -23,7 +23,7 @@ console.log(f1.age) //18
 
 但是直接调用这个Foo函数的时候，this指向的是window.
 
-```
+```js
 function Foo() {
   this.name = 'lihouchun'
   this.age = 18
@@ -38,7 +38,7 @@ Foo();
 
 **如果函数作为对象的一个属性，并且作为对象的属性被调用时，函数中的this指向该对象。**
 
-```
+```js
 var obj = {
   x: 10,
   fn: function () {
@@ -52,7 +52,7 @@ obj.fn();
 
 但是，如果它不是作为obj的属性被调用时，指向的是window.如下所示:
 
-```
+```js
 var obj = {
   x: 10,
   fn: function () {
@@ -70,7 +70,7 @@ fn函数被赋值到了另一个变量fn1中，并且执行fn1，此时this指�
 
 当一个函数被call，apply调用时，this的值就取决于传入的对象的值。
 
-```
+```js
 var obj = {
   x: 100
 }
@@ -89,7 +89,7 @@ fn.call(obj)
 
 下面一种特殊情况:
 
-```
+```js
 var x = 10;
 
 var obj =  {
