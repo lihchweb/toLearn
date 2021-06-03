@@ -17,7 +17,7 @@
 
 那么我们可以在自己定义的方法的 prototype 中新增自己的属性；
 
-```
+```js
 function Fn() {
   Fn.prototype.name = 'lihch';
   Fn.prototype.getAge = function () {
@@ -32,7 +32,7 @@ function Fn() {
 那这么做有什么用？
 jQuery的方法就是写在原型上的。
 用上述代码演示下来就是：
-```
+```js
 function Fn() {
   Fn.prototype.name = 'lihch';
   Fn.prototype.getAge = function () {
