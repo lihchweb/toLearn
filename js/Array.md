@@ -142,4 +142,125 @@ var resArr = arr.splice(2, 2, 666, 999)
 //arr [2, 6, 666, 999, 10]
 //resArr[7, 9]
 ```
+### 6.2  concat()
+
+
+
+```js
+var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+```
+
+
+
+#### 参数
+
+ `valueN`**可选**： 数组和/或值，将被合并到一个新的数组中。 如果省略了所有 `valueN` 参数，则 `concat` 会返回调用此方法的现存数组的一个浅拷贝。  
+
+#### 返回值
+
+新的Array实例，即返回一个新的数组。
+
+#### 补充
+
+ 该方法创建一个新的数组，它由被调用的对象中的元素组成，每个参数的顺序依次是该参数的元素（如果参数是数组）或参数本身（如果参数不是数组）。它不会递归到嵌套数组参数中。 
+
+ 该方法不会改变`this`或任何作为参数提供的数组，而是返回一个浅拷贝，它包含与原始数组相结合的相同元素的副本。 原始数组的元素将复制到新数组中，如果原始数组的元素是：
+
+- 对象引用（而不是实际对象）：`concat`将对象引用复制到新数组中。 原始数组和新数组都引用相同的对象。 也就是说，如果引用的对象被修改，则更改对于新数组和原始数组都是可见的。（ 如果该元素是数组，同样适用）
+- 数据类型如字符串，数字和布尔（不是`String`，`Number` 和`Boolean` 对象）：`concat`将字符串和数字的值复制到新数组中。
+
+
+
+> 值得注意的是:  数组/值在连接时保持不变。此外，对于新数组的任何操作（仅当元素不是对象引用时）都不会对原始数组产生影响，反之亦然。 （因为concat执行浅拷贝）
+
+#### 示例
+
+```js
+// 1.浅拷贝一个数组，在某些情况下适用。
+var arr = [2, 3, 4]
+var resArr = [].concat(arr)
+//resArr [2, 3, 4]
+
+//2. 正常的链接数组
+var arr = [2, 3, 4]
+var str = 'foo'
+var arr2 = [83, 12]
+
+var resArr = arr.concat(str, arr2)
+// resArr [2, 3, 4, "foo", 83, 12]
+
+```
+
+## 7. 面试点
+
+### 7.1 数组扁平化
+
+测试用的数组如下：
+
+```js
+var arr = [1, 22, 89, 23, [746, 965, [4582, ['foo', 'bar', 'kevin', [63, 41, 52]]]], 3, [62, 52, 42], true, false, [{name: 'lihch'}]];
+
+```
+
+
+
+#### 方案1：递归遍历
+
+> push和concat的运用
+
+
+
+判断数组:
+
+- Array.isArray()
+- Object.prototype.toString.call(arr) === '[object Array]'
+
+```js
+function flattern (array) {
+  var resArr = [];
+  array.map((item, idx) => {
+    if(Object.prototype.toString.call(item) === '[object Array]') {
+      resArr = resArr.concat(_flattern(item))
+    } else {
+      resArr.push(item)
+    }
+  })
+
+  return resArr;
+}
+```
+
+遍历可改为for循环或者其他遍历方法，判断数组的方法也可以改用其他。
+
+
+
+#### 方案2：reduce()
+
+> 递归遍历的进阶，可以使用reduce来递归遍历，省去了手动 ```resArr = []``` 的步骤
+
+```js
+function flattern (array) {
+  return array.reduce((initVal, curVal) => {
+    return initVal.concat(Array.isArray(curVal) ? __flattern1(curVal) : curVal);
+  },[])
+}
+```
+
+#### 方案3：利用es6扩展运算符...
+
+>  ES6 的扩展运算符，用于取出参数对象的所有可遍历属性，拷贝到当前对象之中 
+
+```js
+function flattern(array) {
+  while (array.some(item => Array.isArray(item))) {
+    array = [].concat(...array);
+  }
+  return array;
+}
+```
+
+
+
+#### 方案4：undercore的实现方式
+
 
