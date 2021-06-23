@@ -1,20 +1,20 @@
 # 1. 目录
 
-1. 数组的属性
-2. 数组的方法
-3. 数组实例
-   1. 属性
-   2. 方法
-      1. 修改器方法
-      2. 访问方法
-      3. 迭代方法
-4. 数组的泛型方法
-5. 规范
-6. 方法详细
-   1. splice()
-   2. concat()
-7. 面试点
-   1. 数组扁平化
+1. [数组的属性](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%B1%9E%E6%80%A7)
+2. [数组的方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#2-%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95)
+3. [数组实例](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#3%E6%95%B0%E7%BB%84%E5%AE%9E%E4%BE%8B)
+   1. [属性](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#31-%E5%B1%9E%E6%80%A7)
+   2. [方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#32-%E6%96%B9%E6%B3%95)
+      1. [修改器方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#321-%E4%BF%AE%E6%94%B9%E5%99%A8%E6%96%B9%E6%B3%95)
+      2. [访问方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#322-%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95)
+      3. [迭代方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#323-%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95)
+4. [数组的泛型方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#4-%E6%95%B0%E7%BB%84%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95)
+5. [规范](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#5-%E8%A7%84%E8%8C%83)
+6. [方法详细](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#6-%E6%96%B9%E6%B3%95%E8%AF%A6%E7%BB%86)
+   1. [splice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#61-splice)
+   2. [concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)
+7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
+   1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
 
 
 # 2.详细
