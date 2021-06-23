@@ -88,7 +88,7 @@
 
 ## 6. 方法详细
 
-### 6.1  array.splice()
+### 6.1 splice()
 
 ```js
 array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
