@@ -35,7 +35,7 @@
 - ```Array.prototype.shift()```：删除数组的第一个元素，**并返回这个元素。**
 - ```Array.prototype.reverse()```：颠倒数组中元素的排序
 - ```Array.prototype.sort()```：对数组元素进行排序，并返回当前数组。
-- ```Array.prototype.splice()```： 在任意的位置给数组添加或删除任意个元素。 
+- [Array.prototype.splice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#61-splice)： 在任意的位置给数组添加或删除任意个元素。 
 
 #### 3.2.2 访问方法
 
