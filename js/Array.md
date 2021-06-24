@@ -16,6 +16,7 @@
    3. [join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)
 7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
    1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
+   2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
 
 
 # 2.详细
@@ -65,7 +66,7 @@
 
 - [Array.prototype.concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)： 返回一个由当前数组和其它若干个数组或者若干个非数组值组合而成的新数组。 
 - [Array.prototype.join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)：连接所有数组元素组合成一个字符串。
-- ```Array.prototype.slice()```：抽取当前数组中的一段元素组合成一个新数组。
+- [Array.prototype.slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)：抽取当前数组中的一段元素组合成一个新数组。
 - ```Array.prototype.toString()```： 返回一个由所有数组元素组合而成的字符串。遮蔽了原型链上的 [`Object.prototype.toString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法。 
 - ```Array.prototype.toLocaleString()```： 返回一个由所有数组元素组合而成的本地化后的字符串。遮蔽了原型链上的 [`Object.prototype.toLocaleString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) 方法。 
 - ```Array.prototype.indexOf()```： 返回数组中第一个与指定值相等的元素的索引，如果找不到这样的元素，则返回 -1。 
@@ -255,6 +256,67 @@ var str4 = arr.join('') //"234"
 ```
 
 
+### 6.4 slice()
+
+
+
+```js
+arr.slice([begin[, end]])
+```
+
+
+
+>  `**slice()**` 方法返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的**浅拷贝**（包括 `begin`，不包括`end`）。原始数组不会被改变。 
+
+
+
+#### 参数
+
+ `begin` **可选** ：提取开始处的下标，从0开始。
+
+- 如果该值为负数，则表示从原数组的倒数第几个元素开始取。
+- 如果省略该参数，则表示从数组的第0项开始取。
+- 如果该值超出数组的索引范围，那么此时就会返回空数组。
+
+
+
+ `end` **可选** ：提取终止处的索引。在该处结束提取。也就是说slice提取的元素从start开始到end结束。**包含start，但是不包含end。**
+
+slice(1,4)会提取原数组中从第1项到第4项，但是不包含第4项。
+
+- 如果该值为负数： 表示在原数组中的倒数第几个元素结束抽取。 `slice(-2,-1)` 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。 
+- 如果省略该参数： 则 `slice` 会一直提取到原数组末尾。 
+- 如果该值超出数组的索引范围， `slice` 也会一直提取到原数组末尾。 
+
+
+
+#### 返回值
+
+  一个含有被提取元素的新数组。
+
+
+
+#### 补充
+
+- 如果该元素是个对象引用 （不是实际的对象），`slice` 会拷贝这个对象引用到新的数组里。两个对象引用都引用了同一个对象。如果被引用的对象发生改变，则新的和原来的数组中的这个元素也会发生改变。
+
+- 对于字符串、数字及布尔值来说（不是 `String`、`Number`或者`Boolean`对象），`slice` 会拷贝这些值到新的数组里。在别的数组里修改这些字符串或数字或是布尔值，将不会影响另一个数组。
+
+ 
+
+#### 示例
+
+
+
+```js
+var arr = [3, 4, 1, 87, 45]
+var a1 = arr.slice() //[3, 4, 1, 87, 45]
+var a2 = arr.slice(1,4); //[ 4, 1, 87 ]
+var a3 = arr.slice(3) //[ 87, 45 ]
+```
+
+
+
 
 ## 7. 面试点
 
@@ -412,6 +474,24 @@ underscore里的扁平化方法如下：
     }
     return output;
   }
+```
+
+### 7.2 利用slice将类数组对象转化为数组对象
+
+> 该方式在有道云笔记中有记录。
+
+
+
+```js
+function list() {
+  return Array.prototype.slice.call(arguments);
+}
+
+var list1 = list(1, 2, 3); // [1, 2, 3]
+//上面的写法可以精简如下
+function list() {
+    return [].slice.call(arguments);
+}
 ```
 
 
