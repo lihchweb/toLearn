@@ -14,9 +14,10 @@
    1. [splice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#61-splice)
    2. [concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)
    3. [join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)
+   4. [slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#64-slice)
 7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
    1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
-   2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
+   2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#72-%E5%88%A9%E7%94%A8slice%E5%B0%86%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
 
 
 # 2.详细
@@ -66,7 +67,7 @@
 
 - [Array.prototype.concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)： 返回一个由当前数组和其它若干个数组或者若干个非数组值组合而成的新数组。 
 - [Array.prototype.join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)：连接所有数组元素组合成一个字符串。
-- [Array.prototype.slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)：抽取当前数组中的一段元素组合成一个新数组。
+- [Array.prototype.slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#64-slice)：抽取当前数组中的一段元素组合成一个新数组。
 - ```Array.prototype.toString()```： 返回一个由所有数组元素组合而成的字符串。遮蔽了原型链上的 [`Object.prototype.toString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法。 
 - ```Array.prototype.toLocaleString()```： 返回一个由所有数组元素组合而成的本地化后的字符串。遮蔽了原型链上的 [`Object.prototype.toLocaleString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) 方法。 
 - ```Array.prototype.indexOf()```： 返回数组中第一个与指定值相等的元素的索引，如果找不到这样的元素，则返回 -1。 
