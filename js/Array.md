@@ -23,6 +23,8 @@
    3. [数组去重](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#73-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D)
 
 
+**特别注意：对数组进行splice操作时，删除数组时会造成数组塌陷问题！**
+
 # 2.详细
 
 ## 1. 数组的属性
