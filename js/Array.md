@@ -16,7 +16,7 @@
    3. [join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)
    4. [slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#64-slice)
    5. [toString()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#65-tostring)
-   6. [迭代方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#65-tostring)
+   6. [迭代方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#66-%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95)
 7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
    1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
    2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#72-%E5%88%A9%E7%94%A8slice%E5%B0%86%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
@@ -79,7 +79,7 @@
 
 需要注意的是，在大多数的迭代方法中，需要传入一个回调函数作为参数。在每一个数组元素都分别执行完回调函数之前，数组的length会被缓存在某个地方。因此，如果在回调函数中为新数组添加了新的元素，它是不会被便利到的；如果删除了元素或者改变了元素的值，那么随后的遍历操作 可能会受到未预期的影响。**因此，在遍历数组的过程中，不要尝试对原数组进行任何修改!**
 
-- ```Array.prototype.forEach()```：为数组中的每个元素执行一次回调函数。
+- ```Array.prototype.forEach()```：为数组中的每个元素执行一次回调函数。**注意此函数无法中途跳出循环，除非抛出异常！**
 - ```Array.prototype.every()```：如果数组中的每个元素都满足测试函数，则返回true,否则返回false.
 - ```Array.prototype.some()```：如果数组中至少有一个元素满足测试函数，则返回true,否则返回false
 - ```Array.prototype.filter()```：将所有在过滤函数中返回true的数组元素放进一个新数组中并返回
