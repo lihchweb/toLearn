@@ -282,4 +282,90 @@ function flattern(array) {
 
 #### 方案4：undercore的实现方式
 
+> 该方法是underscore的变种方法。
+>
+> 思路: output用以存储已经扁平化的数据。遍历数组中的项，如果是数组，并且
+>
+> - 只扁平化一次：那就遍历该项，依次将该项里的值放入output里
+> - 全部扁平化：那就递归处理，传入的值为数组里的项，output也作为参数传入
+>
+> 如果不是数组，并且
+>
+> - strict为false：值放入数组
+> - strict为true：跳过，不处理。
+
+
+
+```js
+/**
+ * 数组扁平化
+ * @param  {Array} input   要处理的数组
+ * @param  {boolean} shallow 是否只扁平一层
+ * @param  {boolean} strict  是否严格处理元素
+ * @param  {Array} output  这是为了方便递归而传递的参数，用来存储返回的值
+ * 源码地址：https://github.com/jashkenas/underscore/blob/master/underscore.js#L528
+ */
+function flatten(input, shallow, strict, output) {
+
+    // 递归使用的时候会用到output
+    output = output || [];
+    var idx = output.length;
+
+    for (var i = 0, len = input.length; i < len; i++) {
+
+        var value = input[i];
+        // 如果是数组，就进行处理
+        if (Array.isArray(value)) {
+            // 如果是只扁平一层，遍历该数组，依此填入 output
+            if (shallow) {
+                var j = 0, length = value.length;
+                while (j < length) output[idx++] = value[j++];
+            }
+            // 如果是全部扁平就递归，传入已经处理的 output，递归中接着处理 output
+            else {
+                flatten(value, shallow, strict, output);
+                idx = output.length;
+            }
+        }
+        // 不是数组，根据 strict 的值判断是跳过不处理还是放入 output
+        else if (!strict){
+            output[idx++] = value;
+        }
+    }
+    return output;
+}
+```
+
+
+
+underscore里的扁平化方法如下：
+
+```js
+  function flatten$1(input, depth, strict, output) {
+    output = output || [];
+    if (!depth && depth !== 0) {
+      depth = Infinity;
+    } else if (depth <= 0) {
+      return output.concat(input);
+    }
+    var idx = output.length;
+    for (var i = 0, length = getLength(input); i < length; i++) {
+      var value = input[i];
+      if (isArrayLike(value) && (isArray(value) || isArguments$1(value))) {
+        // Flatten current level of array or arguments object.
+        if (depth > 1) {
+          flatten$1(value, depth - 1, strict, output);
+          idx = output.length;
+        } else {
+          var j = 0, len = value.length;
+          while (j < len) output[idx++] = value[j++];
+        }
+      } else if (!strict) {
+        output[idx++] = value;
+      }
+    }
+    return output;
+  }
+```
+
 
