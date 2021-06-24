@@ -16,6 +16,7 @@
    3. [join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)
    4. [slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#64-slice)
    5. [toString()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#65-tostring)
+   6. [迭代方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#65-tostring)
 7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
    1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
    2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#72-%E5%88%A9%E7%94%A8slice%E5%B0%86%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
@@ -345,7 +346,31 @@ var array = [1, 2, 'a'];
 console.log(array.toString()); //'1,2,a'
 ```
 
+### 6.6 迭代方法
 
+
+
+```js
+arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
+
+arr.every(callback(element[, index[, array]])[, thisArg])
+
+arr.some(callback(element[, index[, array]])[, thisArg])
+
+var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
+
+var new_array = arr.map(function callback(currentValue[, index[, array]]) {
+ // Return element for new_array 
+}[, thisArg])
+
+arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+```
+
+上面的```thisArg```指的是 执行 `callback` 时使用的 `this` 值。 
+
+
+
+> 这些方法有道云笔记已经做了详细的记录。
 
 
 ## 7. 面试点
