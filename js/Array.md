@@ -39,7 +39,7 @@
 - ```Array.prototype. constructor``` ：所有的数组实例都会继承该属性，它指向Array，表面所有的数组都行Array构造出来的。
 - ```Array.prototype.length```：Array.prototype是个数组，从控制台输出可以看出，它的length属性是0
 
-![image](https://user-images.githubusercontent.com/24636279/123025120-b8cbeb80-d40c-11eb-9018-74e52e4eab72.png)
+> 可以通过控制台打印```Array.prototype```来验证，可以看出它是要给数组，数组中有一个```length```的项，它的值为0
 
 
 ### 3.2 方法
@@ -88,7 +88,7 @@
 
 数组的泛型方法是非标准方法，并且已经弃用，有可能不久就要移除，不做深入理解。
 
-[数组的泛型方法，可点击理解](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#%E6%95%B0%E7%BB%84%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95)
+[数组的泛型方法，可点击了解](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#%E6%95%B0%E7%BB%84%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95)
 
 
 
