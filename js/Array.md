@@ -19,7 +19,8 @@
    6. [迭代方法](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#66-%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95)
 7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
    1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
-   2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#72-%E5%88%A9%E7%94%A8slice%E5%B0%86%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
+   2. [利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#72-%E5%88%A9%E7%94%A8slice%E5%B0%86%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
+   3. [数组去重]()
 
 
 # 2.详细
@@ -549,4 +550,7 @@ function list() {
 }
 ```
 
+### 7.3 数组去重
+
+这是之前总结的数组去重的博客：[数组去重](https://blog.csdn.net/lihchweb/article/details/108472619)
 
