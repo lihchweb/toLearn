@@ -62,7 +62,7 @@
 
 
 
-- ```[Array.prototype.concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)```： 返回一个由当前数组和其它若干个数组或者若干个非数组值组合而成的新数组。 
+- [Array.prototype.concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)： 返回一个由当前数组和其它若干个数组或者若干个非数组值组合而成的新数组。 
 - ```Array.prototype.join()```：连接所有数组元素组合成一个字符串。
 - ```Array.prototype.slice()```：抽取当前数组中的一段元素组合成一个新数组。
 - ```Array.prototype.toString()```： 返回一个由所有数组元素组合而成的字符串。遮蔽了原型链上的 [`Object.prototype.toString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法。 
