@@ -15,6 +15,7 @@
    2. [concat()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#62--concat)
    3. [join()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#63-join)
    4. [slice()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#64-slice)
+   5. [toString()](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#64-slice)
 7. [面试点](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#7-%E9%9D%A2%E8%AF%95%E7%82%B9)
    1. [数组扁平化](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#71-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96)
    2. [7.2 利用slice将类数组对象转化为数组对象](https://github.com/lihchweb/toLearn/blob/main/js/Array.md#72-%E5%88%A9%E7%94%A8slice%E5%B0%86%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
@@ -314,6 +315,34 @@ var arr = [3, 4, 1, 87, 45]
 var a1 = arr.slice() //[3, 4, 1, 87, 45]
 var a2 = arr.slice(1,4); //[ 4, 1, 87 ]
 var a3 = arr.slice(3) //[ 87, 45 ]
+```
+
+### 6.5 toString()
+
+
+
+```js
+arr.toString()
+```
+
+
+
+>  返回一个字符串，表示指定的数组及其元素。 
+
+
+
+`Array`对象覆盖了`Object`的 `toString` 方法。对于数组对象，`toString` 方法连接数组并返回一个字符串，其中包含用逗号分隔的每个数组元素。
+
+
+
+**注意：当一个数组被作为文本值或者进行字符串连接操作时，将会自动调用其 `toString` 方法。**
+
+#### 示例
+
+```js
+var array = [1, 2, 'a'];
+
+console.log(array.toString()); //'1,2,a'
 ```
 
 
