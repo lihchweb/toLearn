@@ -129,3 +129,34 @@ UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordin
 第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
 
 第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。
+
+
+## 代码理解
+```python
+s1 = 72
+s2 = 85
+r = (85-72) / 72 * 100
+print('小明成绩提升了 %.1f%%' % r)
+print('小明成绩提升了{0:.1f}%'.format(r))
+print(f'小明成绩提升了{r:.1f}%')
+```
+
+## list和tuple
+
+它们是python内置的的数据类型：列表。
+
+一个是可变的，一个是不可变的。tuple的不变意味着列表内的元素指向永远不变。
+
+他们一些共通的方法：
+ - len()
+ - 下标访问: l[1]
+ - 空列表的表示方法: [] 和 ()
+
+
+其中list拥有以下等方法：
+ - append():添加
+ - pop()：可传参
+ - remove():移除匹配的元素
+
+
+
