@@ -31,8 +31,45 @@ https://www.liaoxuefeng.com/wiki/1016959663602400/1017032074151456
   - 使用Unicode表示的`str`通过使用`encode()`方法可以编码为指定的bytes
   - bytes变为Unicode表示的`str`通过使用`decode()`方法。
 - 计算str包含多少个字符，可以用`len()`函数
+- 输出格式化的字符串
+  - 使用`%`表示
+  - 使用`format()`表示
+  - `f-string`:使用以 f 开头的字符串.规则是：{xx} 里面的值会被变量替换
 
+常见的占位符：
+占位符 | 替换内容
+------------ | -------------
+%d | 整数
+%f | 浮点数
+%s | 字符串
+%x | 十六进制整数
 
+格式化整数和浮点数还可以指定是否补0和整数与小数的位数：
+```python
+>>> '%2d-%02d' % (3, 1)
+' 3-01'
+
+>>> '%.2f' % 3.1415926
+'3.14'
+
+# 如果字符串里包含 % 是个普通字符，这时候要转义
+
+>>>'growth rate: %d %%' % 7
+'growth rate: 7 %'
+```
+
+使用`format()`格式化：
+```python
+>>> 'Hello, {0}, 成绩提升了 {1:.1f}%'.format('小红', 17.256)
+'Hello, 小红, 成绩提升了 17.3%'
+```
+使用`f-sting`格式化：
+```python
+>>> r = 2.5
+>>> s = 3.14 * r ** 2
+>>> print(f'The area of a oricle with radius {r} is {s:.2f}')
+The area of a oricle with radius 2.5 is 19.62
+```
 
 
 ```python
@@ -55,6 +92,12 @@ UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordin
 'ABC'
 >>> b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
 '中文'
+
+>>> 'hello, %s'%'world'
+'hello, world'
+
+>>> 'Hi,%s, you have $%d.' % ('jack', 100000)
+'Hi, Michael, you have $1000000.'
 
 ```
 
